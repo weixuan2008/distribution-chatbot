@@ -1,6 +1,6 @@
 export default {
   chatbot: {
-    title: 'Enterprise Chatbot',
+    title: 'Distribution Agent',
     placeholder: 'Type your message...',
     send: 'Send',
     reset: 'Reset',

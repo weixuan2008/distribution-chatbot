@@ -1,4 +1,4 @@
-# Enterprise Chatbot SDK (Vue 3 + Quasar + TypeScript)
+# Distribution Agent SDK (Vue 3 + Quasar + TypeScript)
 
 Enterprise-grade chatbot platform that supports:
 
