@@ -1,0 +1,67 @@
+{
+  "name": "enterprise-chatbot-sdk",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "main": "dist/sdk.umd.js",
+  "module": "dist/sdk.esm.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/sdk.esm.js",
+      "require": "./dist/sdk.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:sdk": "vite build --mode sdk && npm run build:types",
+    "build:webcomponent": "vite build --mode webcomponent",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts,.vue",
+    "format": "prettier --write .",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dompurify": "^3.2.5",
+    "markdown-it": "^14.1.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.48.0",
+    "pinia": "^3.0.1",
+    "quasar": "^2.18.1",
+    "uuid": "^11.1.0",
+    "vue": "^3.5.0",
+    "vue-i18n": "^11.1.2",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@quasar/vite-plugin": "^1.9.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/dompurify": "^3.2.0",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.13.10",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-vue": "^10.0.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.3",
+    "sass-embedded": "^1.97.3",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8",
+    "vue-tsc": "^2.2.8"
+  }
+}
